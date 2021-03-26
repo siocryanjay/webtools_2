@@ -5,7 +5,7 @@
         <div class="col-md-7">
             <div class="card">
                 <div class="card-header ">
-                <a href="{{ route('file.index') }}" class="btn btn-primary btn-sm float-right">
+                    <a href="{{ route('file.index') }}" class="btn btn-primary btn-sm float-right">
                         <i class="fa fa-reply" aria-hidden="true"></i> Back to Files
                     </a>
                     <h5 class="text-center">{{ $file->name }}</h5>
@@ -25,7 +25,7 @@
                      <div class="col-md-6-offset-4">
                         {{-- <embed src="/storage/{{ $file->path }}" type="application/pdf" width="100%" height="600px" />--}}
                          <a href="/storage/{{ $file->path }}"><button type="submit"> Open File </button></a>
-                        {{--  <iframe src="{{ url('storage/'. $file->path) }}" frameborder="0" style="width: 100%"></iframe> --}} 
+                        {{--  <iframe src="{{ url('storage/'. $file->path) }}" frameborder="5" style="width: 100%"></iframe> --}} 
                     </div>   
                 </div>
                <div class="card-footer">
