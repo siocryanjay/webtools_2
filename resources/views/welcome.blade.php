@@ -19,36 +19,34 @@
   </head>
   <body>
     
-  
-  <div class="hero-wrap js-fullheight">
-    
+    <div class="hero-wrap js-fullheight">
+      <div class="overlay"></div>
       <div class="container-fluid px-0">
       	<div class="row d-md-flex no-gutters slider-text align-items-center js-fullheight justify-content-start">
 	      	<img class="one-third js-fullheight align-self-end order-md-first img-fluid" src="images/undraw_co-working_825n.svg" alt="">
 	        <div class="one-forth d-flex align-items-center ftco-animate js-fullheight">
 	        	<div class="text mt-5">
-	        		<span class="subheading text-muted">Hi, I am</span>
-	            <h1 class="mb-3 text-dark"><span>Ryan Jay Sioc</span></h1>
-	            <p class="text-body">Studying and learning at home with the course Web Software Tools 2</p>
+	        		<span class="subheading">Hi, I am</span>
+	            <h1 class="mb-3"><span>Ryan Jay Sioc</span></h1>
+	            <p>Studying and learning at home with the course Web Software Tools 2</p>
                 @if (Route::has('login'))
                 @auth
                 <div class="d-inline-flex">
-                  <a href="{{ url('/home') }}" class="btn btn-secondary px-4 py-3">Home</a>
-                    @else
-                    <a href="{{ route('login') }}" class="btn btn-secondary px-4 py-3">Login</a>
+	            <a href="{{ url('/home') }}" class="btn btn-secondary px-4 py-3">Home</a>
+                @else
+                <a href="{{ route('login') }}" class="btn btn-secondary px-4 py-3">Login</a>
 
-                        @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="btn btn-secondary px-4 py-3">Register</a>
-                        @endif
-                    @endauth  
-                </div> 
+                    @if (Route::has('register'))
+                    <a href="{{ route('register') }}" class="btn btn-secondary px-4 py-3">Register</a>
+                    @endif
+                 @endauth  
+                 </div> 
 	          </div>
               @endif
 	        </div>
 	    	</div>
       </div>
-    
-  </div>
+    </div>
     
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
