@@ -1,27 +1,48 @@
-@extends('layouts.dashboard')
+@extends('layouts.admin')
 
 @section('content')
-<h1 class="mt-4 mb-4">Click choose file to upload</h1>
-
-    <form action="{{ route('file.store', $file) }}" method="POST" enctype="multipart/form-data">
-    @csrf
-        <div class="row">
+<div class="card">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+        <div class="card card-primary justify-content-center">
             
-            <div class="col-md-12">
-                <div class="form-group">
-                    <input type="file" name="files" placeholder="Choose file" id="file">
+                <div class="card-header">
+                <a href="{{ route('file.index') }}" class="btn btn-success btn-sm float-right">
+                            <i class="fa fa-reply" aria-hidden="true"></i> Back to File Upload
+                        </a>
+                    <h3 class="card-title ">Add new file</h3>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                <form action="{{ route('file.store', $file) }}" method="POST" enctype="multipart/form-data">
+                @csrf
+
+                        <!-- /input-group -->
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <input type="file" name="files" id="file">
                     @error('files')
                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                     @enderror
+                  </div>
+                  <!-- /btn-group -->
+                  
                 </div>
-            </div>
+                <!-- /input-group -->
+            
+                    <hr>
+                    <a href="{{ route('file.index') }}" class="btn btn-danger btn-block">Cancel</a>
+                    <a class="btn btn-primary btn-block"><button type="submit" id="submit" class="btn btn-primary btn-block">Add File</button></a>
                 
-            <div class="col-md-12">
-                <button type="submit" class="btn btn-primary" id="submit">Add File</button>
-                <a href="{{ route('file.index') }}" class="btn btn-danger">
-                    <span class="hidden-xs hidden-sm"><em>Cancel</em></span>
-                </a>
-            </div>
-        </div>     
-    </form>
+
+                    </form>
+                </div>
+                <!-- /.card-body -->
+                </div>
+        </div>
+    </div>
+</div>
 @endsection
+
+
+

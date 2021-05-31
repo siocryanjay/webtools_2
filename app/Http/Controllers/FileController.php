@@ -66,7 +66,7 @@ class FileController extends Controller
                 return redirect()->route('file.index')->with('success', 'File has been uploaded!');
            }
            else{
-                return redirect()->route('file.create')->with('error','Error in uploading file');
+                return redirect()->route('file.create')->with('error','You exceed your file limit');
            }
     }
 
@@ -121,7 +121,7 @@ class FileController extends Controller
                 return redirect()->route('file.index')->with('success', 'File has been uploaded!');
            }
            else{
-                return redirect()->route('file.create')->with('error','Error in uploading file');
+                return redirect()->route('file.create')->with('error','You exceed your file limit');
            }
     }
 
