@@ -20,7 +20,7 @@
   <body>
     
     <div class="hero-wrap js-fullheight">
-      <div class="overlay"></div>
+      <div class="overlay">
       <div class="container-fluid px-0">
       	<div class="row d-md-flex no-gutters slider-text align-items-center js-fullheight justify-content-start">
 	      	<img class="one-third js-fullheight align-self-end order-md-first img-fluid" src="images/undraw_co-working_825n.svg" alt="">
@@ -45,6 +45,7 @@
               @endif
 	        </div>
 	    	</div>
+      </div>
       </div>
     </div>
     
