@@ -22,13 +22,13 @@
 
                 <hr>
 
-                <strong><i class="fas fa-map-marker-alt mr-1"></i> Name</strong>
+                <strong><i class="far fa-file-alt mr-1"></i> Name</strong>
 
                 <p class="text-muted">{{ $product->name }}</p>
 
                 <hr>
 
-                <strong><i class="fas fa-map-marker-alt mr-1"></i> Desription</strong>
+                <strong><i class="far fa-file-alt mr-1"></i> Desription</strong>
 
                 <p class="text-muted">{{ $product->description }}</p>
 
